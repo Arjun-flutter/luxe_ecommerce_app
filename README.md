@@ -24,35 +24,35 @@ LUXE is a premium, modern, and fully responsive E-commerce application built wit
 
 ## 📱 App Screenshots (Total 31)
 
-### 🔹 1. Onboarding & Authentication (6 Images)
+### 🔹 1. Onboarding & Authentication
 | Splash Screen | Onboarding 1 | Onboarding 2 | Onboarding 3 | Login Page | Sign Up |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| <img src="assets/screenshots/splash.png" width="140" /> | <img src="assets/screenshots/onboarding1.png" width="140" /> | <img src="assets/screenshots/onboarding2.png" width="140" /> | <img src="assets/screenshots/onboarding3.png" width="140" /> | <img src="assets/screenshots/login.png" width="140" /> | <img src="assets/screenshots/signup.png" width="140" /> |
+| <img src="./screenshots/splash_screen.png" width="140" /> | <img src="./screenshots/onboard_screen1.png" width="140" /> | <img src="./screenshots/onboard_screen2.png" width="140" /> | <img src="./screenshots/onboard_screen3.png" width="140" /> | <img src="./screenshots/login_screen.png" width="140" /> | <img src="./screenshots/signup_screen.png" width="140" /> |
 
-### 🔹 2. Browsing & Discovery (6 Images)
-| Home (Light) | Home (Dark) | Search Bar | Categories | Category View | Filter Drawer |
+### 🔹 2. Browsing & Discovery
+| Home Screen | Dark Mode | Categories | Category View | Search Page | Filters |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| <img src="assets/screenshots/home_light.png" width="140" /> | <img src="assets/screenshots/home_dark.png" width="140" /> | <img src="assets/screenshots/search.png" width="140" /> | <img src="assets/screenshots/categories.png" width="140" /> | <img src="assets/screenshots/cat_view.png" width="140" /> | <img src="assets/screenshots/filters.png" width="140" /> |
+| <img src="./screenshots/home_screen.png" width="140" /> | <img src="./screenshots/dark_mode.png" width="140" /> | <img src="./screenshots/categories.png" width="140" /> | <img src="./screenshots/categorie_screen.png" width="140" /> | <img src="./screenshots/search_page.png" width="140" /> | <img src="./screenshots/filter%20&%20popup.png" width="140" /> |
 
-### 🔹 3. Product Details Experience (6 Images)
-| Product Main | Image Gallery | Size Selector | Color Picker | Reviews | Related Items |
+### 🔹 3. Product Details & Reviews
+| Detailed Page | Reviews | Sort Options | Favorites | Notifications | Help Center |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| <img src="assets/screenshots/prod_main.png" width="140" /> | <img src="assets/screenshots/prod_gallery.png" width="140" /> | <img src="assets/screenshots/prod_size.png" width="140" /> | <img src="assets/screenshots/prod_color.png" width="140" /> | <img src="assets/screenshots/prod_reviews.png" width="140" /> | <img src="assets/screenshots/prod_related.png" width="140" /> |
+| <img src="./screenshots/detailed_screen.png" width="140" /> | <img src="./screenshots/reviews_page.png" width="140" /> | <img src="./screenshots/sort_options.png" width="140" /> | <img src="./screenshots/favorites_screen.png" width="140" /> | <img src="./screenshots/notifications_screen.png" width="140" /> | <img src="./screenshots/help_center.png" width="140" /> |
 
-### 🔹 4. Shopping Bag & Wishlist (5 Images)
-| Empty Bag | Active Bag | Item Added | Wishlist | Fav Items |
-| :---: | :---: | :---: | :---: | :---: |
-| <img src="assets/screenshots/cart_empty.png" width="160" /> | <img src="assets/screenshots/cart_active.png" width="160" /> | <img src="assets/screenshots/cart_added.png" width="160" /> | <img src="assets/screenshots/wishlist.png" width="160" /> | <img src="assets/screenshots/favorites.png" width="160" /> |
+### 🔹 4. Shopping Bag & Checkout
+| Empty Cart | Active Cart | Checkout Page | Payment | Success Page | Live Chat |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| <img src="./screenshots/emptycart_screen.png" width="140" /> | <img src="./screenshots/cart_screen.png" width="140" /> | <img src="./screenshots/checkout_page.png" width="140" /> | <img src="./screenshots/currency_options.png" width="140" /> | <img src="./screenshots/success_page.png" width="140" /> | <img src="./screenshots/live_chart_screen.png" width="140" /> |
 
-### 🔹 5. Checkout & Order Flow (5 Images)
-| Shipping | Payment | Summary | Processing | Success |
-| :---: | :---: | :---: | :---: | :---: |
-| <img src="assets/screenshots/checkout_ship.png" width="160" /> | <img src="assets/screenshots/payment.png" width="160" /> | <img src="assets/screenshots/summary.png" width="160" /> | <img src="assets/screenshots/processing.png" width="160" /> | <img src="assets/screenshots/success.png" width="160" /> |
+### 🔹 5. Profile & Management
+| Profile Screen | User Info | Address List | Add Address | Orders Screen | Orders List |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| <img src="./screenshots/profile_screen.png" width="140" /> | <img src="./screenshots/user_screen.png" width="140" /> | <img src="./screenshots/address_screen.png" width="140" /> | <img src="./screenshots/add_address_screen.png" width="140" /> | <img src="./screenshots/orders_screen.png" width="140" /> | <img src="./screenshots/orders_drawer.png" width="140" /> |
 
-### 🔹 6. User Account & Settings (3 Images)
-| Profile Page | Order History | App Settings |
-| :---: | :---: | :---: |
-| <img src="assets/screenshots/profile.png" width="180" /> | <img src="assets/screenshots/orders.png" width="180" /> | <img src="assets/screenshots/settings.png" width="180" /> |
+### 🔹 6. Settings
+| Settings |
+| :---: |
+| <img src="./screenshots/settings_screen.png" width="200" /> |
 
 ## 🛠️ Installation
 

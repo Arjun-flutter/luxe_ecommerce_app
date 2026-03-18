@@ -3,6 +3,7 @@ import 'package:new_project/models/cart.dart';
 import 'package:provider/provider.dart';
 import '../../providers/cart.dart';
 import '../../providers/orders.dart';
+import 'success_screen.dart';
 
 class CheckoutScreen extends StatefulWidget {
   static const routeName = '/checkout';
@@ -28,6 +29,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         title: const Text('Checkout'),
         backgroundColor: isDark ? Colors.black : Colors.white,
         elevation: 0,
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
@@ -189,24 +191,28 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
+                    // Logic to add order and clear cart
                     Provider.of<Orders>(
                       context,
                       listen: false,
                     ).addOrder(cart.items.values.cast<CartItem>().toList(), cart.totalAmount);
                     cart.clear();
-                    _showSuccessDialog();
+                    
+                    // Navigate to Success Screen instead of showing a dialog
+                    Navigator.of(context).pushReplacementNamed(SuccessScreen.routeName);
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: isDark ? Colors.white : Colors.black,
+                    backgroundColor: isDark ? Colors.white : const Color(0xFF3B82F6),
                     foregroundColor: isDark ? Colors.black : Colors.white,
                     padding: const EdgeInsets.symmetric(vertical: 18),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
+                    elevation: 0,
                   ),
                   child: const Text(
                     'CONFIRM ORDER',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, letterSpacing: 1),
                   ),
                 ),
               ),
@@ -253,54 +259,6 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                 color: Color(0xFF3B82F6),
                 size: 20,
               ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  void _showSuccessDialog() {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (ctx) => AlertDialog(
-        backgroundColor: isDark ? const Color(0xFF121212) : Colors.white,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const SizedBox(height: 20),
-            const Icon(
-              Icons.check_circle_rounded,
-              color: Colors.green,
-              size: 80,
-            ),
-            const SizedBox(height: 24),
-            Text(
-              'Order Placed!',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: isDark ? Colors.white : Colors.black),
-            ),
-            const SizedBox(height: 12),
-            const Text(
-              'Your order has been received\nand is being processed.',
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.grey),
-            ),
-            const SizedBox(height: 32),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () => Navigator.of(
-                  context,
-                ).pushNamedAndRemoveUntil('/', (route) => false),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: isDark ? Colors.white : Colors.black,
-                  foregroundColor: isDark ? Colors.black : Colors.white,
-                ),
-                child: const Text('Back to Home'),
-              ),
-            ),
           ],
         ),
       ),
