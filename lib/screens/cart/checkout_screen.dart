@@ -15,7 +15,7 @@ class CheckoutScreen extends StatefulWidget {
 }
 
 class _CheckoutScreenState extends State<CheckoutScreen> {
- final String _selectedAddress = '123 Main St, Springfield, IL 62704';
+  final String _selectedAddress = '123 Main St, Springfield, IL 62704';
   String _paymentMethod = 'Credit Card';
 
   @override
@@ -73,7 +73,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                   ),
                 ),
                 trailing: Icon(
-                  Icons.edit_outlined, 
+                  Icons.edit_outlined,
                   size: 20,
                   color: isDark ? Colors.white70 : Colors.black54,
                 ),
@@ -90,7 +90,11 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
               ),
             ),
             const SizedBox(height: 12),
-            _buildPaymentOption('Credit Card', Icons.credit_card_outlined, isDark),
+            _buildPaymentOption(
+              'Credit Card',
+              Icons.credit_card_outlined,
+              isDark,
+            ),
             _buildPaymentOption(
               'PayPal',
               Icons.account_balance_wallet_outlined,
@@ -117,7 +121,10 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 itemCount: cart.items.length,
-                separatorBuilder: (ctx, i) => Divider(height: 1, color: isDark ? Colors.white10 : Colors.black12),
+                separatorBuilder: (ctx, i) => Divider(
+                  height: 1,
+                  color: isDark ? Colors.white10 : Colors.black12,
+                ),
                 itemBuilder: (ctx, i) {
                   final item = cart.items.values.toList()[i];
                   return ListTile(
@@ -130,7 +137,9 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                     ),
                     subtitle: Text(
                       '${item.quantity} units',
-                      style: TextStyle(color: isDark ? Colors.white60 : Colors.black54),
+                      style: TextStyle(
+                        color: isDark ? Colors.white60 : Colors.black54,
+                      ),
                     ),
                     trailing: Text(
                       '\$${(item.price * item.quantity).toStringAsFixed(2)}',
@@ -151,7 +160,9 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         padding: const EdgeInsets.all(24),
         decoration: BoxDecoration(
           color: isDark ? Colors.black : Colors.white,
-          border: isDark ? const Border(top: BorderSide(color: Colors.white10)) : null,
+          border: isDark
+              ? const Border(top: BorderSide(color: Colors.white10))
+              : null,
           boxShadow: [
             if (!isDark)
               BoxShadow(
@@ -192,17 +203,21 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                 child: ElevatedButton(
                   onPressed: () {
                     // Logic to add order and clear cart
-                    Provider.of<Orders>(
-                      context,
-                      listen: false,
-                    ).addOrder(cart.items.values.cast<CartItem>().toList(), cart.totalAmount);
+                    Provider.of<Orders>(context, listen: false).addOrder(
+                      cart.items.values.cast<CartItem>().toList(),
+                      cart.totalAmount,
+                    );
                     cart.clear();
-                    
+
                     // Navigate to Success Screen instead of showing a dialog
-                    Navigator.of(context).pushReplacementNamed(SuccessScreen.routeName);
+                    Navigator.of(
+                      context,
+                    ).pushReplacementNamed(SuccessScreen.routeName);
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: isDark ? Colors.white : const Color(0xFF3B82F6),
+                    backgroundColor: isDark
+                        ? Colors.white
+                        : const Color(0xFF3B82F6),
                     foregroundColor: isDark ? Colors.black : Colors.white,
                     padding: const EdgeInsets.symmetric(vertical: 18),
                     shape: RoundedRectangleBorder(
@@ -212,7 +227,11 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                   ),
                   child: const Text(
                     'CONFIRM ORDER',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, letterSpacing: 1),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      letterSpacing: 1,
+                    ),
                   ),
                 ),
               ),
@@ -234,7 +253,9 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
           color: isDark ? const Color(0xFF121212) : Colors.white,
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
-            color: isSelected ? const Color(0xFF3B82F6) : (isDark ? Colors.white10 : Colors.transparent),
+            color: isSelected
+                ? const Color(0xFF3B82F6)
+                : (isDark ? Colors.white10 : Colors.transparent),
             width: 2,
           ),
         ),
@@ -242,7 +263,9 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
           children: [
             Icon(
               icon,
-              color: isSelected ? const Color(0xFF3B82F6) : (isDark ? Colors.white54 : Colors.grey),
+              color: isSelected
+                  ? const Color(0xFF3B82F6)
+                  : (isDark ? Colors.white54 : Colors.grey),
             ),
             const SizedBox(width: 16),
             Text(

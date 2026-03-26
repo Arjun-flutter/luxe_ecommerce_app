@@ -122,7 +122,7 @@ class _CartScreenState extends State<CartScreen> {
                           enabled: !isEmpty,
                           style: TextStyle(color: isDark ? Colors.white : Colors.black),
                           decoration: InputDecoration(
-                            hintText: 'Enter promo code',
+                            hintText: 'Enter promo code, Try LUXE20',
                             hintStyle: TextStyle(
                               color: isDark ? Colors.white38 : Colors.grey,
                               fontSize: 14,
