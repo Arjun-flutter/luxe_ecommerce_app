@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Auth with ChangeNotifier {
   String? _token;
-  String? _userId;
+
 
   bool get isAuth {
     return _token != null;
@@ -15,7 +15,6 @@ class Auth with ChangeNotifier {
     }
     // Auto-login after successful signup
     _token = 'dummy_token';
-    _userId = 'u1';
     notifyListeners();
   }
 
@@ -25,13 +24,12 @@ class Auth with ChangeNotifier {
       throw Exception('Invalid password');
     }
     _token = 'dummy_token';
-    _userId = 'u1';
+
     notifyListeners();
   }
 
   void logout() {
     _token = null;
-    _userId = null;
     notifyListeners();
   }
 }

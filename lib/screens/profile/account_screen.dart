@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../providers/auth.dart';
 import '../../providers/orders.dart';
-import '../../providers/products.dart';
 import '../../providers/favorites_provider.dart';
 import '../orders/orders_screen.dart';
 import 'address_screen.dart';

@@ -9,7 +9,6 @@ import './providers/orders.dart';
 import './providers/settings_provider.dart';
 import './providers/favorites_provider.dart';
 import './screens/home/main_screen.dart';
-import './screens/auth/login_screen.dart';
 import './screens/auth/splash_screen.dart';
 import './screens/auth/onboarding_screen.dart';
 

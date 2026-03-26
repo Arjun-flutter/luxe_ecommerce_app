@@ -34,7 +34,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
 
     final String productId = productIdObj as String;
     final productsProvider = Provider.of<Products>(context);
-    final Product loadedProduct = productsProvider.findById(productId)!;
+    final Product loadedProduct = productsProvider.findById(productId);
 
     final similarProducts = productsProvider
         .findByCategory(loadedProduct.category)

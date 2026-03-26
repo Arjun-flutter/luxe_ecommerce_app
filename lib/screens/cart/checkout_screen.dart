@@ -15,7 +15,7 @@ class CheckoutScreen extends StatefulWidget {
 }
 
 class _CheckoutScreenState extends State<CheckoutScreen> {
-  String _selectedAddress = '123 Main St, Springfield, IL 62704';
+ final String _selectedAddress = '123 Main St, Springfield, IL 62704';
   String _paymentMethod = 'Credit Card';
 
   @override
